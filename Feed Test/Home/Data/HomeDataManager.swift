@@ -63,7 +63,7 @@ extension HomeDataManager: HomeData {
                                    unixTimestamp: "Example unixTimestamp",
                                    image: nil)
         
-        feed.append(newModel)
+        feed.insert(newModel, at: 0)
         
         return newModel
     }

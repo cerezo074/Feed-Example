@@ -84,7 +84,7 @@ private extension FeedViewController {
                 guard let `self` = self else { return }
                 guard showLatest, let lastFeedPath = self.presenter.latestFeedPath else { return }
                 
-                self.feedCollectionView.scrollToItem(at: lastFeedPath, at: .bottom, animated: true)
+                self.feedCollectionView.scrollToItem(at: lastFeedPath, at: .top, animated: true)
             }
         }
     }
