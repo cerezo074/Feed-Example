@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		04177A7323C40DFA00C22EC9 /* Fee_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A7223C40DFA00C22EC9 /* Fee_TestTests.swift */; };
 		04177A8223C40E6400C22EC9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A8023C40E6400C22EC9 /* FeedViewController.swift */; };
 		04177A8323C40E6400C22EC9 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04177A8123C40E6400C22EC9 /* FeedViewController.xib */; };
+		04177A8923C4112B00C22EC9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A8823C4112B00C22EC9 /* HomeRouter.swift */; };
+		04177A8B23C4113900C22EC9 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A8A23C4113900C22EC9 /* HomeModule.swift */; };
+		04177A8F23C4128F00C22EC9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A8E23C4128F00C22EC9 /* HomePresenter.swift */; };
+		04177A9123C412F700C22EC9 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A9023C412F700C22EC9 /* HomeDataManager.swift */; };
 		AED30995801930605844629C /* Pods_Fee_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6FD0903D8B368867999610 /* Pods_Fee_TestTests.framework */; };
 		F60FECADED07947B1E6835F2 /* Pods_Fee_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DD5AECF17182BF488EE150 /* Pods_Fee_Test.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +42,10 @@
 		04177A7423C40DFA00C22EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04177A8023C40E6400C22EC9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		04177A8123C40E6400C22EC9 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		04177A8823C4112B00C22EC9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		04177A8A23C4113900C22EC9 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		04177A8E23C4128F00C22EC9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		04177A9023C412F700C22EC9 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 		3C6FD0903D8B368867999610 /* Pods_Fee_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fee_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		590623E8B424DF68265EA8A1 /* Pods-Fee Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fee Test.release.xcconfig"; path = "Target Support Files/Pods-Fee Test/Pods-Fee Test.release.xcconfig"; sourceTree = "<group>"; };
 		5A6FBDB4C03DF801DC534230 /* Pods-Fee TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fee TestTests.debug.xcconfig"; path = "Target Support Files/Pods-Fee TestTests/Pods-Fee TestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,8 +134,10 @@
 		04177A7F23C40E4100C22EC9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				04177A8523C40E6F00C22EC9 /* Core */,
+				04177A8723C4110A00C22EC9 /* Router */,
+				04177A8523C40E6F00C22EC9 /* Presenter */,
 				04177A8423C40E6700C22EC9 /* View */,
+				04177A8A23C4113900C22EC9 /* HomeModule.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -141,11 +151,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		04177A8523C40E6F00C22EC9 /* Core */ = {
+		04177A8523C40E6F00C22EC9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				04177A9223C4131000C22EC9 /* Data */,
+				04177A8E23C4128F00C22EC9 /* HomePresenter.swift */,
 			);
-			path = Core;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		04177A8723C4110A00C22EC9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				04177A8823C4112B00C22EC9 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		04177A9223C4131000C22EC9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				04177A9023C412F700C22EC9 /* HomeDataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		278002279445FBF4312BEBC8 /* Frameworks */ = {
@@ -165,7 +193,6 @@
 				5A6FBDB4C03DF801DC534230 /* Pods-Fee TestTests.debug.xcconfig */,
 				A16F3B7469DE8C528001DCD4 /* Pods-Fee TestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -338,6 +365,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04177A8223C40E6400C22EC9 /* FeedViewController.swift in Sources */,
+				04177A8923C4112B00C22EC9 /* HomeRouter.swift in Sources */,
+				04177A8B23C4113900C22EC9 /* HomeModule.swift in Sources */,
+				04177A8F23C4128F00C22EC9 /* HomePresenter.swift in Sources */,
+				04177A9123C412F700C22EC9 /* HomeDataManager.swift in Sources */,
 				04177A6323C40DFA00C22EC9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,7 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Fee Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Fee Test/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,7 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Fee Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Fee Test/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
