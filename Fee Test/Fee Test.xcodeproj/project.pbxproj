@@ -21,6 +21,12 @@
 		0457E2B023C41C8D001CF976 /* URLSession+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457E2AF23C41C8D001CF976 /* URLSession+Codable.swift */; };
 		0457E2B223C41D36001CF976 /* HomeServiceDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457E2B123C41D36001CF976 /* HomeServiceDefinitions.swift */; };
 		0490F70223C4268600F5BA38 /* HomePresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */; };
+		0490F70423C42BF300F5BA38 /* FeedDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490F70323C42BF300F5BA38 /* FeedDiffable.swift */; };
+		04C3CE9C23C4319D00634672 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CE9B23C4319D00634672 /* FeedDataSource.swift */; };
+		04C3CE9E23C433F800634672 /* FeedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CE9D23C433F800634672 /* FeedSectionController.swift */; };
+		04C3CEA223C4347800634672 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CEA023C4347800634672 /* FeedCell.swift */; };
+		04C3CEA323C4347800634672 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C3CEA123C4347800634672 /* FeedCell.xib */; };
+		04C3CEA623C441F800634672 /* NSObject+IGListDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CEA523C441F800634672 /* NSObject+IGListDiffable.swift */; };
 		AED30995801930605844629C /* Pods_Fee_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6FD0903D8B368867999610 /* Pods_Fee_TestTests.framework */; };
 		F60FECADED07947B1E6835F2 /* Pods_Fee_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DD5AECF17182BF488EE150 /* Pods_Fee_Test.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +60,12 @@
 		0457E2AF23C41C8D001CF976 /* URLSession+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Codable.swift"; sourceTree = "<group>"; };
 		0457E2B123C41D36001CF976 /* HomeServiceDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceDefinitions.swift; sourceTree = "<group>"; };
 		0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterInterface.swift; sourceTree = "<group>"; };
+		0490F70323C42BF300F5BA38 /* FeedDiffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDiffable.swift; sourceTree = "<group>"; };
+		04C3CE9B23C4319D00634672 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
+		04C3CE9D23C433F800634672 /* FeedSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSectionController.swift; sourceTree = "<group>"; };
+		04C3CEA023C4347800634672 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		04C3CEA123C4347800634672 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		04C3CEA523C441F800634672 /* NSObject+IGListDiffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+IGListDiffable.swift"; sourceTree = "<group>"; };
 		3C6FD0903D8B368867999610 /* Pods_Fee_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fee_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		590623E8B424DF68265EA8A1 /* Pods-Fee Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fee Test.release.xcconfig"; path = "Target Support Files/Pods-Fee Test/Pods-Fee Test.release.xcconfig"; sourceTree = "<group>"; };
 		5A6FBDB4C03DF801DC534230 /* Pods-Fee TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fee TestTests.debug.xcconfig"; path = "Target Support Files/Pods-Fee TestTests/Pods-Fee TestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,8 +167,11 @@
 		04177A8423C40E6700C22EC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04C3CE9F23C4344900634672 /* Cells */,
+				04C3CE9A23C4318600634672 /* Section Controllers */,
 				04177A8023C40E6400C22EC9 /* FeedViewController.swift */,
 				04177A8123C40E6400C22EC9 /* FeedViewController.xib */,
+				04C3CE9B23C4319D00634672 /* FeedDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +207,7 @@
 		0457E2AA23C41A19001CF976 /* Diffables */ = {
 			isa = PBXGroup;
 			children = (
+				0490F70323C42BF300F5BA38 /* FeedDiffable.swift */,
 			);
 			path = Diffables;
 			sourceTree = "<group>";
@@ -199,6 +215,7 @@
 		0457E2AD23C41C49001CF976 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				04C3CEA423C441B800634672 /* Extensions */,
 				0457E2AE23C41C5F001CF976 /* Network */,
 			);
 			path = Shared;
@@ -210,6 +227,31 @@
 				0457E2AF23C41C8D001CF976 /* URLSession+Codable.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		04C3CE9A23C4318600634672 /* Section Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04C3CE9D23C433F800634672 /* FeedSectionController.swift */,
+			);
+			path = "Section Controllers";
+			sourceTree = "<group>";
+		};
+		04C3CE9F23C4344900634672 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04C3CEA023C4347800634672 /* FeedCell.swift */,
+				04C3CEA123C4347800634672 /* FeedCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04C3CEA423C441B800634672 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04C3CEA523C441F800634672 /* NSObject+IGListDiffable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		278002279445FBF4312BEBC8 /* Frameworks */ = {
@@ -317,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04177A6523C40DFA00C22EC9 /* Assets.xcassets in Resources */,
+				04C3CEA323C4347800634672 /* FeedCell.xib in Resources */,
 				04177A8323C40E6400C22EC9 /* FeedViewController.xib in Resources */,
 				04177A6823C40DFA00C22EC9 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -402,11 +445,16 @@
 			files = (
 				04177A8223C40E6400C22EC9 /* FeedViewController.swift in Sources */,
 				04177A8923C4112B00C22EC9 /* HomeRouter.swift in Sources */,
+				04C3CE9C23C4319D00634672 /* FeedDataSource.swift in Sources */,
 				0457E2AC23C41BAE001CF976 /* FeedElement.swift in Sources */,
 				04177A8B23C4113900C22EC9 /* HomeModule.swift in Sources */,
+				04C3CE9E23C433F800634672 /* FeedSectionController.swift in Sources */,
 				04177A8F23C4128F00C22EC9 /* HomePresenter.swift in Sources */,
+				04C3CEA223C4347800634672 /* FeedCell.swift in Sources */,
 				0457E2B223C41D36001CF976 /* HomeServiceDefinitions.swift in Sources */,
+				04C3CEA623C441F800634672 /* NSObject+IGListDiffable.swift in Sources */,
 				04177A9123C412F700C22EC9 /* HomeDataManager.swift in Sources */,
+				0490F70423C42BF300F5BA38 /* FeedDiffable.swift in Sources */,
 				0490F70223C4268600F5BA38 /* HomePresenterInterface.swift in Sources */,
 				04177A6323C40DFA00C22EC9 /* AppDelegate.swift in Sources */,
 				0457E2B023C41C8D001CF976 /* URLSession+Codable.swift in Sources */,
@@ -571,7 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "example.Fee-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -589,7 +637,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "example.Fee-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

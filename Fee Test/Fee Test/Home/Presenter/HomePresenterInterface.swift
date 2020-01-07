@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import IGListKit
 
 enum HomeViewState {
     case loading
@@ -16,7 +17,13 @@ enum HomeViewState {
     case showError(message: String)
 }
 
-protocol HomePresenterInterface: class {
+typealias HomePresenterInterface = HomeViewData & HomeViewInteraction
+
+protocol HomeViewData: class {
+    var data: [ListDiffable] { get }
+}
+
+protocol HomeViewInteraction: class {
     var state: Driver<HomeViewState> { get }
     
     func viewDidLoad()

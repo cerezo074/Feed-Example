@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import IGListKit
 
 class FeedViewController: UIViewController {
     
@@ -20,13 +21,20 @@ class FeedViewController: UIViewController {
     @IBOutlet private weak var loaderView: UIActivityIndicatorView!
     @IBOutlet private weak var errorMessageLabel: UILabel!
     
-    private let presenter: HomePresenterInterface
+    private let presenter: HomeViewInteraction
     private let router: HomeRouter
+    private let dataSource: FeedDataSource
     private let disposeBag = DisposeBag()
+    
+    private lazy var adapter: ListAdapter = {
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
+    }()
+    
     
     init(presenter: HomePresenterInterface, router: HomeRouter) {
         self.presenter = presenter
         self.router = router
+        self.dataSource = FeedDataSource(eventHandler: presenter)
         super.init(nibName: String(describing: FeedViewController.self),
                    bundle: nil)
     }
@@ -39,6 +47,7 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         loaderView.startAnimating()
         bindViewState()
+        setupCollection()
         presenter.viewDidLoad()
     }
 
@@ -70,7 +79,13 @@ private extension FeedViewController {
             errorMessageLabel.isHidden = true
             loaderView.isHidden = true
             loaderView.stopAnimating()
+            adapter.performUpdates(animated: true)
         }
+    }
+    
+    func setupCollection() {
+        adapter.dataSource = dataSource
+        adapter.collectionView = feedCollectionView
     }
     
     @IBAction func didTapPublishButton(_ sender: Any) {
