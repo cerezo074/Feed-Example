@@ -100,7 +100,7 @@ private extension HomePresenter {
                          date: $0.unixTimestamp,
                          name: "\($0.firstName) \($0.lastName)",
                          message: $0.postBody,
-                         imageURL: $0.image)
+                         image: $0.image)
         }
         
         let listViewObject = FeedListDiffable(feed: viewModels)

@@ -26,26 +26,19 @@ extension FeedSectionController {
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        guard let containerSize = collectionContext?.containerSize else {
+        guard let containerSize = collectionContext?.containerSize,
+            let cell = updateCell(at: index) else {
             return .zero
         }
         
-        return CGSize(width: containerSize.width, height: 100)
+        return CGSize(width: containerSize.width, height: cell.height)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let dequeuedCell = collectionContext?.dequeueReusableCell(withNibName: String(describing: FeedCell.self),
-                                                                  bundle: nil,
-                                                                  for: self,
-                                                                  at: index)
-        
-        guard let feedCell = dequeuedCell as? FeedCell else {
+        guard let feedCell = updateCell(at: index) else {
             assertionFailure("Invalid state for section controller")
             return UICollectionViewCell()
         }
-        
-        let viewModel = data.feed[index]
-        feedCell.setup(with: viewModel)
         
         return feedCell
     }
@@ -56,6 +49,23 @@ extension FeedSectionController {
         }
         
         self.data = data
+    }
+    
+}
+
+private extension FeedSectionController {
+    
+    func updateCell(at index: Int) -> FeedCell? {
+        let dequeuedCell = collectionContext?.dequeueReusableCell(withNibName: String(describing: FeedCell.self),
+                                                                  bundle: nil,
+                                                                  for: self,
+                                                                  at: index)
+        
+        guard let feedCell = dequeuedCell as? FeedCell else { return nil }
+        let viewModel = data.feed[index]
+        feedCell.setup(with: viewModel)
+        
+        return feedCell
     }
     
 }

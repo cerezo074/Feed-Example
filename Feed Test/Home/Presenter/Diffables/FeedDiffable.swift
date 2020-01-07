@@ -22,13 +22,31 @@ class FeedDiffable: NSObject {
     let date: String
     let name: String
     let message: String
-    let imageURL: String?
+    private let imageURLString: String?
     
-    init(id: Int, date: String, name: String, message: String, imageURL: String?) {
+    init(id: Int, date: String, name: String, message: String, image: String?) {
         self.id = id
         self.date = date
         self.name = name
         self.message = message
-        self.imageURL = imageURL
+        self.imageURLString = image
     }
+}
+
+extension FeedDiffable {
+    
+    var showImage: Bool {
+        return imageURL != nil
+    }
+    
+    var imageURL: URL? {
+        guard let imageURLString = imageURLString,
+            !imageURLString.isEmpty,
+            imageURLString != " " else {
+                return nil
+        }
+        
+        return URL(string: imageURLString)
+    }
+    
 }

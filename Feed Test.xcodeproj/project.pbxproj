@@ -21,6 +21,7 @@
 		0457E2B223C41D36001CF976 /* HomeServiceDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457E2B123C41D36001CF976 /* HomeServiceDefinitions.swift */; };
 		0490F70223C4268600F5BA38 /* HomePresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */; };
 		0490F70423C42BF300F5BA38 /* FeedDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490F70323C42BF300F5BA38 /* FeedDiffable.swift */; };
+		04A340A823C4E20F00A20F65 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A340A723C4E20F00A20F65 /* String+Height.swift */; };
 		04C3CE9C23C4319D00634672 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CE9B23C4319D00634672 /* FeedDataSource.swift */; };
 		04C3CE9E23C433F800634672 /* FeedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CE9D23C433F800634672 /* FeedSectionController.swift */; };
 		04C3CEA223C4347800634672 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CEA023C4347800634672 /* FeedCell.swift */; };
@@ -51,6 +52,7 @@
 		0457E2B123C41D36001CF976 /* HomeServiceDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceDefinitions.swift; sourceTree = "<group>"; };
 		0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterInterface.swift; sourceTree = "<group>"; };
 		0490F70323C42BF300F5BA38 /* FeedDiffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDiffable.swift; sourceTree = "<group>"; };
+		04A340A723C4E20F00A20F65 /* String+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
 		04C3CE9B23C4319D00634672 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
 		04C3CE9D23C433F800634672 /* FeedSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSectionController.swift; sourceTree = "<group>"; };
 		04C3CEA023C4347800634672 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				04C3CEA523C441F800634672 /* NSObject+IGListDiffable.swift */,
+				04A340A723C4E20F00A20F65 /* String+Height.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				04C3CEA623C441F800634672 /* NSObject+IGListDiffable.swift in Sources */,
 				04177A9123C412F700C22EC9 /* HomeDataManager.swift in Sources */,
 				0490F70423C42BF300F5BA38 /* FeedDiffable.swift in Sources */,
+				04A340A823C4E20F00A20F65 /* String+Height.swift in Sources */,
 				04C3CEB323C44A8100634672 /* PostPresenter.swift in Sources */,
 				0490F70223C4268600F5BA38 /* HomePresenterInterface.swift in Sources */,
 				04177A6323C40DFA00C22EC9 /* AppDelegate.swift in Sources */,

@@ -8,5 +8,6 @@ target 'Feed Test' do
   pod 'IGListKit', '~> 4.0.0'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
-
+  pod 'Nuke', '8.4.0'
+  
 end
