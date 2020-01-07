@@ -12,9 +12,10 @@ import Nuke
 class FeedCell: UICollectionViewCell {
 
     struct LayoutConstant {
-        static var messageTopSpace: CGFloat { return 89 }
-        static var heightWithImage: CGFloat { return 189.5 }
-        static var heightWithoutImage: CGFloat { return 20 }
+        static var messageTopSpace: CGFloat { return 69 }
+        static var messageLeadingSpace: CGFloat { return 8 }
+        static var heightWithImage: CGFloat { return 159 }
+        static var heightWithoutImage: CGFloat { return 0 }
     }
     
     @IBOutlet private weak var messageLabel: UILabel!
@@ -35,9 +36,9 @@ class FeedCell: UICollectionViewCell {
         updateBodyImage(with: viewModel)
     }
     
-    var height: CGFloat {
-        let height = messageLabel.text?.height(constraintedWidth: messageLabel.bounds.width,
-                                               font: messageLabel.font) ?? 0
+    func getHeight(constrainedWidth: CGFloat) -> CGFloat {
+        let horizontalSpace: CGFloat = constrainedWidth - (LayoutConstant.messageLeadingSpace * 2)
+        let height = messageLabel.text?.height(constraintedWidth: horizontalSpace, font: messageLabel.font) ?? 0
         return LayoutConstant.messageTopSpace + height + messageLabelBottomConstraint.constant
     }
 

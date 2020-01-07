@@ -15,6 +15,9 @@ class FeedSectionController: ListSectionController {
     
     init(data: FeedListDiffable) {
         self.data = data
+        super.init()
+        inset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+        minimumLineSpacing = 20
     }
     
 }
@@ -31,7 +34,7 @@ extension FeedSectionController {
             return .zero
         }
         
-        return CGSize(width: containerSize.width, height: cell.height)
+        return CGSize(width: containerSize.width, height: cell.getHeight(constrainedWidth: containerSize.width))
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
