@@ -10,7 +10,6 @@
 		04177A6323C40DFA00C22EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A6223C40DFA00C22EC9 /* AppDelegate.swift */; };
 		04177A6523C40DFA00C22EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04177A6423C40DFA00C22EC9 /* Assets.xcassets */; };
 		04177A6823C40DFA00C22EC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04177A6623C40DFA00C22EC9 /* LaunchScreen.storyboard */; };
-		04177A7323C40DFA00C22EC9 /* Fee_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A7223C40DFA00C22EC9 /* Fee_TestTests.swift */; };
 		04177A8223C40E6400C22EC9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A8023C40E6400C22EC9 /* FeedViewController.swift */; };
 		04177A8323C40E6400C22EC9 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04177A8123C40E6400C22EC9 /* FeedViewController.xib */; };
 		04177A8923C4112B00C22EC9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04177A8823C4112B00C22EC9 /* HomeRouter.swift */; };
@@ -32,19 +31,8 @@
 		04C3CEAE23C4480900634672 /* HomeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CEAD23C4480900634672 /* HomeTransition.swift */; };
 		04C3CEB023C449AB00634672 /* PostModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CEAF23C449AB00634672 /* PostModule.swift */; };
 		04C3CEB323C44A8100634672 /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CEB223C44A8100634672 /* PostPresenter.swift */; };
-		5AD12228E439696E81A513F1 /* Pods_Feed_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFC68B57C1F14C22FD9CD3E /* Pods_Feed_TestTests.framework */; };
 		F14B622CE209A8BF9E44A346 /* Pods_Feed_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2C6E4ACC93660993777155 /* Pods_Feed_Test.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		04177A6F23C40DFA00C22EC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04177A5723C40DF900C22EC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04177A5E23C40DF900C22EC9;
-			remoteInfo = "Fee Test";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04177A5F23C40DFA00C22EC9 /* Feed Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Feed Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,9 +40,6 @@
 		04177A6423C40DFA00C22EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04177A6723C40DFA00C22EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04177A6923C40DFA00C22EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04177A6E23C40DFA00C22EC9 /* Feed TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feed TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04177A7223C40DFA00C22EC9 /* Fee_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fee_TestTests.swift; sourceTree = "<group>"; };
-		04177A7423C40DFA00C22EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04177A8023C40E6400C22EC9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		04177A8123C40E6400C22EC9 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		04177A8823C4112B00C22EC9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -97,14 +82,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04177A6B23C40DFA00C22EC9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AD12228E439696E81A513F1 /* Pods_Feed_TestTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				04177A6123C40DFA00C22EC9 /* Feed Test */,
-				04177A7123C40DFA00C22EC9 /* Fee TestTests */,
 				04177A6023C40DFA00C22EC9 /* Products */,
 				A8BE3964D566C5B281BCB8BD /* Pods */,
 				278002279445FBF4312BEBC8 /* Frameworks */,
@@ -123,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				04177A5F23C40DFA00C22EC9 /* Feed Test.app */,
-				04177A6E23C40DFA00C22EC9 /* Feed TestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,15 +113,6 @@
 				04177A7D23C40E1800C22EC9 /* Assets */,
 			);
 			path = "Feed Test";
-			sourceTree = "<group>";
-		};
-		04177A7123C40DFA00C22EC9 /* Fee TestTests */ = {
-			isa = PBXGroup;
-			children = (
-				04177A7223C40DFA00C22EC9 /* Fee_TestTests.swift */,
-				04177A7423C40DFA00C22EC9 /* Info.plist */,
-			);
-			path = "Fee TestTests";
 			sourceTree = "<group>";
 		};
 		04177A7D23C40E1800C22EC9 /* Assets */ = {
@@ -343,25 +309,6 @@
 			productReference = 04177A5F23C40DFA00C22EC9 /* Feed Test.app */;
 			productType = "com.apple.product-type.application";
 		};
-		04177A6D23C40DFA00C22EC9 /* Feed TestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04177A7A23C40DFA00C22EC9 /* Build configuration list for PBXNativeTarget "Feed TestTests" */;
-			buildPhases = (
-				25AA66359EEE322AB15838D2 /* [CP] Check Pods Manifest.lock */,
-				04177A6A23C40DFA00C22EC9 /* Sources */,
-				04177A6B23C40DFA00C22EC9 /* Frameworks */,
-				04177A6C23C40DFA00C22EC9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04177A7023C40DFA00C22EC9 /* PBXTargetDependency */,
-			);
-			name = "Feed TestTests";
-			productName = "Fee TestTests";
-			productReference = 04177A6E23C40DFA00C22EC9 /* Feed TestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -374,10 +321,6 @@
 				TargetAttributes = {
 					04177A5E23C40DF900C22EC9 = {
 						CreatedOnToolsVersion = 11.1;
-					};
-					04177A6D23C40DFA00C22EC9 = {
-						CreatedOnToolsVersion = 11.1;
-						TestTargetID = 04177A5E23C40DF900C22EC9;
 					};
 				};
 			};
@@ -395,7 +338,6 @@
 			projectRoot = "";
 			targets = (
 				04177A5E23C40DF900C22EC9 /* Feed Test */,
-				04177A6D23C40DFA00C22EC9 /* Feed TestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -410,13 +352,6 @@
 				04C3CEA323C4347800634672 /* FeedCell.xib in Resources */,
 				04177A8323C40E6400C22EC9 /* FeedViewController.xib in Resources */,
 				04177A6823C40DFA00C22EC9 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04177A6C23C40DFA00C22EC9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,28 +373,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Feed Test/Pods-Feed Test-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		25AA66359EEE322AB15838D2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Feed TestTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97565587923AFACD42AFC2DA /* [CP] Check Pods Manifest.lock */ = {
@@ -513,23 +426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04177A6A23C40DFA00C22EC9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04177A7323C40DFA00C22EC9 /* Fee_TestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		04177A7023C40DFA00C22EC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04177A5E23C40DF900C22EC9 /* Feed Test */;
-			targetProxy = 04177A6F23C40DFA00C22EC9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04177A6623C40DFA00C22EC9 /* LaunchScreen.storyboard */ = {
@@ -693,50 +590,6 @@
 			};
 			name = Release;
 		};
-		04177A7B23C40DFA00C22EC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38D80EC999EF623D020ACC14 /* Pods-Feed TestTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Fee TestTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "example.Fee-TestTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feed Test.app/Feed Test";
-			};
-			name = Debug;
-		};
-		04177A7C23C40DFA00C22EC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58A3041202264DB29CCA499E /* Pods-Feed TestTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Fee TestTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "example.Fee-TestTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feed Test.app/Feed Test";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -754,15 +607,6 @@
 			buildConfigurations = (
 				04177A7823C40DFA00C22EC9 /* Debug */,
 				04177A7923C40DFA00C22EC9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04177A7A23C40DFA00C22EC9 /* Build configuration list for PBXNativeTarget "Feed TestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04177A7B23C40DFA00C22EC9 /* Debug */,
-				04177A7C23C40DFA00C22EC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
