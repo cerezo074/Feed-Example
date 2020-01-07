@@ -30,11 +30,6 @@ extension HomePresenter {
         return viewState.asDriver(onErrorJustReturn: .showError(message: "System not available, try later please :("))
     }
     
-    var latestFeedPath: IndexPath? {
-        guard let list = list else { return nil }
-        return IndexPath(item: list.feed.count - 1, section: 0)
-    }
-    
     func viewDidLoad() {
         dataManager.fetchFeed()
             .subscribe(onCompleted: { [weak self] in
@@ -71,7 +66,7 @@ extension HomePresenter {
         list = createList()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            self?.viewState.accept(.showFeed(showLatest: true))
+            self?.viewState.accept(.showFeed(showRecent: true))
         }
     }
     
@@ -89,7 +84,7 @@ private extension HomePresenter {
         if dataManager.feed.isEmpty {
             viewState.accept(.showError(message: "You dont have any post :("))
         } else {
-            viewState.accept(.showFeed(showLatest: false))
+            viewState.accept(.showFeed(showRecent: false))
         }
     }
     

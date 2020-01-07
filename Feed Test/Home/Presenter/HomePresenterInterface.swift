@@ -13,7 +13,7 @@ import IGListKit
 
 enum HomeViewState {
     case loading
-    case showFeed(showLatest: Bool)
+    case showFeed(showRecent: Bool)
     case showError(message: String)
 }
 
@@ -25,7 +25,6 @@ protocol HomeViewData: class {
 
 protocol HomeViewInteraction: class {
     var state: Driver<HomeViewState> { get }
-    var latestFeedPath: IndexPath? { get }
     
     func viewDidLoad()
 }

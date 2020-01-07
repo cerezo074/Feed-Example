@@ -64,6 +64,8 @@
                 <outlet property="dateLabel" destination="jOy-V5-kT1" id="aUX-Z3-wWs"/>
                 <outlet property="messageLabel" destination="r2g-oN-E4m" id="F3X-2S-rzp"/>
                 <outlet property="messageLabelBottomConstraint" destination="R9v-Ff-KsD" id="mIX-uq-2AG"/>
+                <outlet property="messageLabelLeadingConstraint" destination="6FN-vt-sju" id="UPr-ZD-WL4"/>
+                <outlet property="messageLabelTopConstraint" destination="6nO-YF-j1N" id="xrd-lh-Pc0"/>
                 <outlet property="nameLabel" destination="ydR-cE-L3y" id="vw3-3r-Ss1"/>
             </connections>
             <point key="canvasLocation" x="-329.71014492753625" y="205.91517857142856"/>

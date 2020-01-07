@@ -12,8 +12,6 @@ import Nuke
 class FeedCell: UICollectionViewCell {
 
     struct LayoutConstant {
-        static var messageTopSpace: CGFloat { return 69 }
-        static var messageLeadingSpace: CGFloat { return 8 }
         static var heightWithImage: CGFloat { return 159 }
         static var heightWithoutImage: CGFloat { return 0 }
     }
@@ -24,6 +22,9 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet private weak var bodyImageView: UIImageView!
     
     @IBOutlet private weak var messageLabelBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var messageLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var messageLabelLeadingConstraint: NSLayoutConstraint!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,9 +38,9 @@ class FeedCell: UICollectionViewCell {
     }
     
     func getHeight(constrainedWidth: CGFloat) -> CGFloat {
-        let horizontalSpace: CGFloat = constrainedWidth - (LayoutConstant.messageLeadingSpace * 2)
+        let horizontalSpace: CGFloat = constrainedWidth - (messageLabelLeadingConstraint.constant * 2)
         let height = messageLabel.text?.height(constraintedWidth: horizontalSpace, font: messageLabel.font) ?? 0
-        return LayoutConstant.messageTopSpace + height + messageLabelBottomConstraint.constant
+        return messageLabelTopConstraint.constant + height + messageLabelBottomConstraint.constant
     }
 
 }

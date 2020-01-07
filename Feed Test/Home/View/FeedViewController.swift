@@ -75,16 +75,16 @@ private extension FeedViewController {
             errorMessageLabel.isHidden = false
             loaderView.isHidden = true
             errorMessageLabel.text = message
-        case .showFeed(let showLatest):
+        case .showFeed(let showRecent):
             feedCollectionView.isHidden = false
             errorMessageLabel.isHidden = true
             loaderView.isHidden = true
             loaderView.stopAnimating()
             adapter.performUpdates(animated: true) { [weak self] _ in
                 guard let `self` = self else { return }
-                guard showLatest, let lastFeedPath = self.presenter.latestFeedPath else { return }
+                guard showRecent else { return }
                 
-                self.feedCollectionView.scrollToItem(at: lastFeedPath, at: .top, animated: true)
+                self.feedCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
             }
         }
     }
