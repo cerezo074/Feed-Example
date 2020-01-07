@@ -8,15 +8,13 @@
 
 import Foundation
 import RxSwift
-
-protocol HomePresenterInterface: class {
-    func viewDidLoad()
-}
+import RxCocoa
 
 class HomePresenter {
     
     private let dataManager: HomeData
     private let disposeBag = DisposeBag()
+    private let viewState = BehaviorRelay<HomeViewState>(value: .loading)
     
     init(dataManager: HomeData? = nil) {
         self.dataManager = dataManager ?? HomeDataManager()
@@ -25,6 +23,10 @@ class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterInterface {
+    
+    var state: Driver<HomeViewState> {
+        return viewState.asDriver(onErrorJustReturn: .showError(message: "System not available, try later please :("))
+    }
     
     func viewDidLoad() {
         dataManager.fetchFeed()
@@ -41,7 +43,17 @@ extension HomePresenter: HomePresenterInterface {
 private extension HomePresenter {
     
     func showFeeds(with error: Error? = nil) {
-        print(dataManager.feed)
+        if let error = error {
+            viewState.accept(.showError(message: "System not available, try later please :("))
+            print(error)
+            return
+        }
+         
+        if dataManager.feed.isEmpty {
+            viewState.accept(.showError(message: "You dont have any post :("))
+        } else {
+            viewState.accept(.showFeed)
+        }
     }
     
 }

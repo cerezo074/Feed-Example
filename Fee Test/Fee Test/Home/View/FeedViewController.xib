@@ -9,8 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController" customModule="Fee_Test" customModuleProvider="target">
             <connections>
+                <outlet property="errorMessageLabel" destination="hEo-4r-bFp" id="tDw-dn-yxO"/>
                 <outlet property="feedCollectionView" destination="iTU-In-cP6" id="tSb-0t-SSv"/>
                 <outlet property="greetingLabel" destination="76g-57-GKu" id="1bD-Ry-t8R"/>
+                <outlet property="loaderView" destination="vqn-hy-nwo" id="weK-8Y-Qda"/>
                 <outlet property="publishButton" destination="1TQ-uD-45Q" id="z3i-PP-GeD"/>
                 <outlet property="publishMessageLabel" destination="S1P-pi-6q3" id="DpA-2Z-twO"/>
                 <outlet property="todayLabel" destination="Cjn-SE-tQR" id="m7y-Hr-UV4"/>
@@ -88,16 +90,30 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="vqn-hy-nwo">
+                    <rect key="frame" x="188.5" y="515.5" width="37" height="37"/>
+                    <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEo-4r-bFp">
+                    <rect key="frame" x="186" y="523.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vqn-hy-nwo" firstAttribute="centerX" secondItem="iTU-In-cP6" secondAttribute="centerX" id="5ie-mo-RiB"/>
+                <constraint firstItem="hEo-4r-bFp" firstAttribute="centerX" secondItem="vqn-hy-nwo" secondAttribute="centerX" id="FSU-12-Tip"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iTU-In-cP6" secondAttribute="trailing" id="N58-fm-jQ9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iTU-In-cP6" secondAttribute="bottom" id="RPl-cj-jop"/>
+                <constraint firstItem="vqn-hy-nwo" firstAttribute="centerY" secondItem="iTU-In-cP6" secondAttribute="centerY" id="Udi-hQ-Y3J"/>
                 <constraint firstItem="iTU-In-cP6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UnA-40-UDy"/>
                 <constraint firstItem="hse-ph-10B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YXf-TF-vEg"/>
                 <constraint firstItem="hse-ph-10B" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="j2m-yU-u0J"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hse-ph-10B" secondAttribute="trailing" id="lCE-FP-hKk"/>
                 <constraint firstItem="iTU-In-cP6" firstAttribute="top" secondItem="hse-ph-10B" secondAttribute="bottom" id="ncv-fQ-5D0"/>
+                <constraint firstItem="hEo-4r-bFp" firstAttribute="centerY" secondItem="vqn-hy-nwo" secondAttribute="centerY" id="tqc-13-3hf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>

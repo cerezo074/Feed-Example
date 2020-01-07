@@ -20,6 +20,7 @@
 		0457E2AC23C41BAE001CF976 /* FeedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457E2AB23C41BAE001CF976 /* FeedElement.swift */; };
 		0457E2B023C41C8D001CF976 /* URLSession+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457E2AF23C41C8D001CF976 /* URLSession+Codable.swift */; };
 		0457E2B223C41D36001CF976 /* HomeServiceDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457E2B123C41D36001CF976 /* HomeServiceDefinitions.swift */; };
+		0490F70223C4268600F5BA38 /* HomePresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */; };
 		AED30995801930605844629C /* Pods_Fee_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6FD0903D8B368867999610 /* Pods_Fee_TestTests.framework */; };
 		F60FECADED07947B1E6835F2 /* Pods_Fee_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DD5AECF17182BF488EE150 /* Pods_Fee_Test.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		0457E2AB23C41BAE001CF976 /* FeedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedElement.swift; sourceTree = "<group>"; };
 		0457E2AF23C41C8D001CF976 /* URLSession+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Codable.swift"; sourceTree = "<group>"; };
 		0457E2B123C41D36001CF976 /* HomeServiceDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceDefinitions.swift; sourceTree = "<group>"; };
+		0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterInterface.swift; sourceTree = "<group>"; };
 		3C6FD0903D8B368867999610 /* Pods_Fee_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fee_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		590623E8B424DF68265EA8A1 /* Pods-Fee Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fee Test.release.xcconfig"; path = "Target Support Files/Pods-Fee Test/Pods-Fee Test.release.xcconfig"; sourceTree = "<group>"; };
 		5A6FBDB4C03DF801DC534230 /* Pods-Fee TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fee TestTests.debug.xcconfig"; path = "Target Support Files/Pods-Fee TestTests/Pods-Fee TestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				0457E2AA23C41A19001CF976 /* Diffables */,
 				04177A8E23C4128F00C22EC9 /* HomePresenter.swift */,
+				0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				04177A8F23C4128F00C22EC9 /* HomePresenter.swift in Sources */,
 				0457E2B223C41D36001CF976 /* HomeServiceDefinitions.swift in Sources */,
 				04177A9123C412F700C22EC9 /* HomeDataManager.swift in Sources */,
+				0490F70223C4268600F5BA38 /* HomePresenterInterface.swift in Sources */,
 				04177A6323C40DFA00C22EC9 /* AppDelegate.swift in Sources */,
 				0457E2B023C41C8D001CF976 /* URLSession+Codable.swift in Sources */,
 			);

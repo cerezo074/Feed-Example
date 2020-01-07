@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class FeedViewController: UIViewController {
     
@@ -15,9 +17,12 @@ class FeedViewController: UIViewController {
     @IBOutlet private weak var publishMessageLabel: UILabel!
     @IBOutlet private weak var publishButton: UIButton!
     @IBOutlet private weak var feedCollectionView: UICollectionView!
+    @IBOutlet private weak var loaderView: UIActivityIndicatorView!
+    @IBOutlet private weak var errorMessageLabel: UILabel!
     
     private let presenter: HomePresenterInterface
     private let router: HomeRouter
+    private let disposeBag = DisposeBag()
     
     init(presenter: HomePresenterInterface, router: HomeRouter) {
         self.presenter = presenter
@@ -32,12 +37,41 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loaderView.startAnimating()
+        bindViewState()
         presenter.viewDidLoad()
     }
 
 }
 
 private extension FeedViewController {
+    
+    func bindViewState() {
+        presenter.state
+            .drive(onNext: { [weak self] (newState) in
+                self?.handle(newState)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func handle(_ viewState: HomeViewState) {
+        switch viewState {
+        case .loading:
+            feedCollectionView.isHidden = true
+            errorMessageLabel.isHidden = true
+            loaderView.isHidden = false
+        case .showError(let message):
+            feedCollectionView.isHidden = true
+            errorMessageLabel.isHidden = false
+            loaderView.isHidden = true
+            errorMessageLabel.text = message
+        case .showFeed:
+            feedCollectionView.isHidden = false
+            errorMessageLabel.isHidden = true
+            loaderView.isHidden = true
+            loaderView.stopAnimating()
+        }
+    }
     
     @IBAction func didTapPublishButton(_ sender: Any) {
         print("Show post screen")
