@@ -14,6 +14,7 @@ class PostPresenter: PostPresenterInterface {
     
     private let viewState: BehaviorRelay<PostViewState>
     private var message: String = ""
+    private var image: UIImage?
     weak var resultDelegate: PostResultDelegate?
     
     init() {
@@ -55,6 +56,24 @@ extension PostPresenter {
         self.message = message
         let isReadyState: PostViewState = .isReady(message: "We are good to go ;)!!!")
         viewState.accept(isReadyState)
+    }
+    
+    func select(image result: ImagePickerController.ImageResult?) {
+        guard let result = result else {
+            image = nil
+            return
+        }
+        
+        if let image = result.image {
+            self.image = image
+            return
+        }
+        
+        if let error = result.error {
+            print(error)
+            let suggestionState: PostViewState = .suggestion(message: "We couldn't pick an image for you, try later please :(")
+            viewState.accept(suggestionState)
+        }
     }
 
 }

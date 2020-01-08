@@ -24,6 +24,7 @@
 		04A340A823C4E20F00A20F65 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A340A723C4E20F00A20F65 /* String+Height.swift */; };
 		04C2F4C423C5FD15005B8FC5 /* MessageViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2F4C323C5FD15005B8FC5 /* MessageViewEvent.swift */; };
 		04C2F4C623C60150005B8FC5 /* PostPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2F4C523C60150005B8FC5 /* PostPresenterInterface.swift */; };
+		04C2F4C823C61E4B005B8FC5 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2F4C723C61E4B005B8FC5 /* ImagePickerController.swift */; };
 		04C3CE9C23C4319D00634672 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CE9B23C4319D00634672 /* FeedDataSource.swift */; };
 		04C3CE9E23C433F800634672 /* FeedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CE9D23C433F800634672 /* FeedSectionController.swift */; };
 		04C3CEA223C4347800634672 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CEA023C4347800634672 /* FeedCell.swift */; };
@@ -57,6 +58,7 @@
 		04A340A723C4E20F00A20F65 /* String+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
 		04C2F4C323C5FD15005B8FC5 /* MessageViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewEvent.swift; sourceTree = "<group>"; };
 		04C2F4C523C60150005B8FC5 /* PostPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenterInterface.swift; sourceTree = "<group>"; };
+		04C2F4C723C61E4B005B8FC5 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		04C3CE9B23C4319D00634672 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
 		04C3CE9D23C433F800634672 /* FeedSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSectionController.swift; sourceTree = "<group>"; };
 		04C3CEA023C4347800634672 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				04C3CEA923C444CE00634672 /* PostFeedViewController.swift */,
 				04C3CEAA23C444CE00634672 /* PostFeedViewController.xib */,
 				04C2F4C323C5FD15005B8FC5 /* MessageViewEvent.swift */,
+				04C2F4C723C61E4B005B8FC5 /* ImagePickerController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				04177A8923C4112B00C22EC9 /* HomeRouter.swift in Sources */,
 				04C3CE9C23C4319D00634672 /* FeedDataSource.swift in Sources */,
 				0457E2AC23C41BAE001CF976 /* FeedElement.swift in Sources */,
+				04C2F4C823C61E4B005B8FC5 /* ImagePickerController.swift in Sources */,
 				04177A8B23C4113900C22EC9 /* HomeModule.swift in Sources */,
 				04C3CE9E23C433F800634672 /* FeedSectionController.swift in Sources */,
 				04177A8F23C4128F00C22EC9 /* HomePresenter.swift in Sources */,

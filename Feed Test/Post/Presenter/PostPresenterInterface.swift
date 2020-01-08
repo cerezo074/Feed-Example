@@ -34,4 +34,5 @@ protocol PostViewInteraction: class {
     
     func publish(from viewController: UIViewController)
     func update(message: String)
+    func select(image: ImagePickerController.ImageResult?)
 }

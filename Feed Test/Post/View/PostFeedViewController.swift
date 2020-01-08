@@ -11,13 +11,14 @@ import RxSwift
 
 class PostFeedViewController: UIViewController {
     
-    @IBOutlet private weak var publishMessageLabel: UILabel!
     @IBOutlet private weak var messageTextView: UITextView!
     @IBOutlet private weak var stateLabel: UILabel!
+    @IBOutlet private weak var photoImageView: UIImageView!
     
     private let messageViewEvent: MessageViewEvent
     private let disposeBag = DisposeBag()
-    let presenter: PostPresenterInterface
+    private let imagePicker = ImagePickerController()
+    private let presenter: PostPresenterInterface
     
     init(presenter: PostPresenterInterface) {
         self.presenter = presenter
@@ -79,6 +80,18 @@ private extension PostFeedViewController {
     
     @objc func didTapShareButton(sender: UIBarButtonItem) {
         presenter.publish(from: self)
+    }
+    
+    @IBAction func didTapClearImage(_ sender: Any) {
+        presenter.select(image: nil)
+        photoImageView.image = nil
+    }
+    
+    @IBAction func didTapPickImage(_ sender: Any) {
+        imagePicker.pickImage(from: self) { [weak self] (result) in
+            self?.photoImageView.image = result.image
+            self?.presenter.select(image: result)
+        }
     }
     
 }
