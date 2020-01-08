@@ -50,14 +50,19 @@ private extension FeedCell {
     func updateBodyImage(with viewModel: FeedDiffable) {
         bodyImageView.isHidden = !viewModel.showImage
         
-        guard let imageURL = viewModel.imageURL else { return }
-        
-        let options = ImageLoadingOptions(
-            placeholder: UIImage(named: "placeholder"),
-            transition: .fadeIn(duration: 0.33)
-        )
-        
-        Nuke.loadImage(with: imageURL, options: options, into: bodyImageView)
+        if let localImage = viewModel.localImage {
+            bodyImageView.image = localImage
+            return
+        } else if let imageURL = viewModel.imageURL {
+            let options = ImageLoadingOptions(
+                placeholder: UIImage(named: "placeholder"),
+                transition: .fadeIn(duration: 0.33)
+            )
+            
+            Nuke.loadImage(with: imageURL, options: options, into: bodyImageView)
+        } else {
+            bodyImageView.image = UIImage(named: "placeholder")
+        }
     }
     
     func updateMessage(with viewModel: FeedDiffable) {

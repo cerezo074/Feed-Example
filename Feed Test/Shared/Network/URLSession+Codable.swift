@@ -16,7 +16,13 @@ extension URLSession {
                 completionHandler(nil, response, error)
                 return
             }
-            completionHandler(try? JSONDecoder().decode(T.self, from: data), response, nil)
+            
+            do {
+                let object = try JSONDecoder().decode(T.self, from: data)
+                completionHandler(object, response, nil)
+            } catch {
+                completionHandler(nil, response, error)
+            }
         }
     }
     

@@ -61,7 +61,8 @@ extension HomeDataManager: HomeData {
                                    lastName: "Example lastName",
                                    postBody: result.message,
                                    unixTimestamp: "Example unixTimestamp",
-                                   image: nil)
+                                   image: nil,
+                                   localImage: result.image)
         
         feed.insert(newModel, at: 0)
         

@@ -41,7 +41,7 @@ extension PostPresenter {
         }
         
         let randomID = Int.random(in: 1...10000)
-        let result = PostResult(id: randomID, message: message)
+        let result = PostResult(id: randomID, message: message, image: image)
         resultDelegate?.handle(result)
         viewState.accept(.dismiss)
     }

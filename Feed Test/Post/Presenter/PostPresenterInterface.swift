@@ -22,6 +22,7 @@ enum PostViewState {
 struct PostResult {
     let id: Int
     let message: String
+    let image: UIImage?
 }
 
 protocol PostResultDelegate: class {
