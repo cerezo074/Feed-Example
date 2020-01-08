@@ -22,6 +22,8 @@
 		0490F70223C4268600F5BA38 /* HomePresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */; };
 		0490F70423C42BF300F5BA38 /* FeedDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490F70323C42BF300F5BA38 /* FeedDiffable.swift */; };
 		04A340A823C4E20F00A20F65 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A340A723C4E20F00A20F65 /* String+Height.swift */; };
+		04C2F4C423C5FD15005B8FC5 /* MessageViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2F4C323C5FD15005B8FC5 /* MessageViewEvent.swift */; };
+		04C2F4C623C60150005B8FC5 /* PostPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2F4C523C60150005B8FC5 /* PostPresenterInterface.swift */; };
 		04C3CE9C23C4319D00634672 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CE9B23C4319D00634672 /* FeedDataSource.swift */; };
 		04C3CE9E23C433F800634672 /* FeedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CE9D23C433F800634672 /* FeedSectionController.swift */; };
 		04C3CEA223C4347800634672 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CEA023C4347800634672 /* FeedCell.swift */; };
@@ -53,6 +55,8 @@
 		0490F70123C4268600F5BA38 /* HomePresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterInterface.swift; sourceTree = "<group>"; };
 		0490F70323C42BF300F5BA38 /* FeedDiffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDiffable.swift; sourceTree = "<group>"; };
 		04A340A723C4E20F00A20F65 /* String+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
+		04C2F4C323C5FD15005B8FC5 /* MessageViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewEvent.swift; sourceTree = "<group>"; };
+		04C2F4C523C60150005B8FC5 /* PostPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenterInterface.swift; sourceTree = "<group>"; };
 		04C3CE9B23C4319D00634672 /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
 		04C3CE9D23C433F800634672 /* FeedSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSectionController.swift; sourceTree = "<group>"; };
 		04C3CEA023C4347800634672 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 			children = (
 				04C3CEA923C444CE00634672 /* PostFeedViewController.swift */,
 				04C3CEAA23C444CE00634672 /* PostFeedViewController.xib */,
+				04C2F4C323C5FD15005B8FC5 /* MessageViewEvent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				04C3CEB223C44A8100634672 /* PostPresenter.swift */,
+				04C2F4C523C60150005B8FC5 /* PostPresenterInterface.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -418,8 +424,10 @@
 				04C3CEA223C4347800634672 /* FeedCell.swift in Sources */,
 				0457E2B223C41D36001CF976 /* HomeServiceDefinitions.swift in Sources */,
 				04C3CEA623C441F800634672 /* NSObject+IGListDiffable.swift in Sources */,
+				04C2F4C423C5FD15005B8FC5 /* MessageViewEvent.swift in Sources */,
 				04177A9123C412F700C22EC9 /* HomeDataManager.swift in Sources */,
 				0490F70423C42BF300F5BA38 /* FeedDiffable.swift in Sources */,
+				04C2F4C623C60150005B8FC5 /* PostPresenterInterface.swift in Sources */,
 				04A340A823C4E20F00A20F65 /* String+Height.swift in Sources */,
 				04C3CEB323C44A8100634672 /* PostPresenter.swift in Sources */,
 				0490F70223C4268600F5BA38 /* HomePresenterInterface.swift in Sources */,

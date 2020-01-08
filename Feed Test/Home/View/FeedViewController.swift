@@ -27,7 +27,9 @@ class FeedViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     private lazy var adapter: ListAdapter = {
-        return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
+        return ListAdapter(updater: ListAdapterUpdater(),
+                           viewController: self,
+                           workingRangeSize: 0)
     }()
     
     

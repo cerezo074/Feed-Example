@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostFeedViewController" customModule="Feed_Test" customModuleProvider="target">
             <connections>
+                <outlet property="messageTextView" destination="uIS-gb-yYg" id="lIq-xS-np0"/>
+                <outlet property="publishMessageLabel" destination="LGZ-w9-6Wg" id="hPY-ZC-TEr"/>
+                <outlet property="stateLabel" destination="xpi-2K-kr8" id="8MM-KQ-EX5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,26 +20,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96I-RE-1R1">
-                    <rect key="frame" x="107" y="428" width="200" height="50"/>
-                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="kOE-MG-z8E"/>
-                        <constraint firstAttribute="height" constant="50" id="o8b-QJ-s1v"/>
-                    </constraints>
-                    <state key="normal" title="Generate Random Post"/>
-                    <connections>
-                        <action selector="didTapGeneratePostButton:" destination="-1" eventType="touchUpInside" id="pSU-sj-KQd"/>
-                    </connections>
-                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uIS-gb-yYg">
+                    <rect key="frame" x="20" y="149" width="374" height="224"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's on your mind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGZ-w9-6Wg">
+                    <rect key="frame" x="20" y="108" width="157" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpi-2K-kr8">
+                    <rect key="frame" x="20" y="821.5" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="96I-RE-1R1" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="5x8-Ye-ifd"/>
-                <constraint firstItem="96I-RE-1R1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Rfa-C5-6xD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xpi-2K-kr8" secondAttribute="trailing" constant="20" id="Bk2-d7-HDh"/>
+                <constraint firstItem="uIS-gb-yYg" firstAttribute="top" secondItem="LGZ-w9-6Wg" secondAttribute="bottom" constant="20" id="CKd-zO-w8X"/>
+                <constraint firstItem="LGZ-w9-6Wg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="KhH-DC-87I"/>
+                <constraint firstItem="xpi-2K-kr8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Lk7-5R-gDj"/>
+                <constraint firstItem="LGZ-w9-6Wg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Llo-2w-94z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xpi-2K-kr8" secondAttribute="bottom" constant="20" id="Ots-GX-AWZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uIS-gb-yYg" secondAttribute="trailing" constant="20" id="ZJp-tc-Gpi"/>
+                <constraint firstItem="xpi-2K-kr8" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="gkh-y0-VqD"/>
+                <constraint firstItem="uIS-gb-yYg" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.25" id="jPb-qX-Elw"/>
+                <constraint firstItem="uIS-gb-yYg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wTx-3m-ImD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
 </document>
